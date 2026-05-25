@@ -1,3 +1,4 @@
+import AboutSection from "./AboutSection";
 import News from "./News";
 
 const NewsSection = () => {
@@ -6,11 +7,14 @@ const NewsSection = () => {
 
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12">
 
+        <AboutSection />
+
+
         {/* Featured */}
         <div>
 
           <h2 className="text-3xl font-bold text-[#0D2B52] mb-10">
-            À LA UNE
+           ACTUALITES
           </h2>
 
           <div className="bg-white rounded-3xl overflow-hidden shadow-lg">
@@ -39,55 +43,9 @@ const NewsSection = () => {
 
           </div>
 
+          <News />
+
         </div>
-
-        <News />
-
-        {/* News */}
-        {/* <div>
-
-          <h2 className="text-3xl font-bold text-[#0D2B52] mb-10">
-            ACTUALITÉS
-          </h2>
-
-          <div className="space-y-6">
-
-            {[1,2,3].map((item) => (
-              <div
-                key={item}
-                className="flex items-start gap-5 border-b pb-6"
-              >
-
-                <div className="bg-gray-100 p-4 rounded-xl text-center min-w-[70px]">
-
-                  <p className="font-bold text-green-700 text-2xl">
-                    15
-                  </p>
-
-                  <span className="text-sm text-gray-500">
-                    MAI
-                  </span>
-
-                </div>
-
-                <div>
-
-                  <h3 className="font-bold text-[#0D2B52]">
-                    Réunion publique
-                  </h3>
-
-                  <p className="text-gray-600 mt-2">
-                    Présentation des projets 2026
-                  </p>
-
-                </div>
-
-              </div>
-            ))}
-
-          </div>
-
-        </div> */}
 
       </div>
 

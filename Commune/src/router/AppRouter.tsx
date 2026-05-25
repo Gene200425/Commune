@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../components/Home";
 import Commune from "../pages/Commune";
 import Footer from "../components/Footer";
-// import Administration from "../pages/Administration";
+import Administration from "../pages/Administration";
 // import Services from "../pages/Services";
 // import News from "../pages/News";
 // import Agenda from "../pages/Agenda";
@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 // import Health from "../pages/Health";
 // import Tourism from "../pages/Tourism";
 // import Gallery from "../pages/Gallery";
-// import Contact from "../pages/Contact";
+import Contact from "../pages/Contact";
 
 const AppRouter = () => {
   return (
@@ -26,9 +26,9 @@ const AppRouter = () => {
 
          <Route path="/commune" element={<Commune />} />
     
-        {/*<Route path="/administration" element={<Administration />} />
+        <Route path="/administration" element={<Administration />} />
 
-        <Route path="/services" element={<Services />} />
+        {/*<Route path="/services" element={<Services />} />
 
         <Route path="/actualites" element={<News />} />
 
@@ -42,9 +42,9 @@ const AppRouter = () => {
 
         <Route path="/tourisme" element={<Tourism />} />
 
-        <Route path="/galerie" element={<Gallery />} />
+        {/*<Route path="/galerie" element={<Gallery />} /> */}
 
-        <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<Contact />} />
         <Route path="/Footer" element={<Footer />} />
 
       </Routes>

@@ -29,6 +29,12 @@ const CommuneDropdown = () => {
 
         <ul className="text-[#0D2B52] font-medium">
 
+            <Link to="/commune">
+            <li className="px-5 py-4 hover:bg-green-50 hover:text-green-700 transition">
+              Decouvrez la commune 
+            </li>
+          </Link>
+
           <Link to="/arrondissements">
             <li className="px-5 py-4 hover:bg-green-50 hover:text-green-700 transition">
               Arrondissements
