@@ -122,8 +122,9 @@ const Stats = () => {
                     ))}
                 </div>
             </div>
+        </section>
 
-        </section><section className="py-20 bg-gray-100 px-6">
+            <section className="py-20 bg-gray-100 px-6">
                 <div className="max-w-7xl mx-auto">
 
                     {/* Titre */}
@@ -194,9 +195,77 @@ const Stats = () => {
 
                     </div>
                 </div>
-            </section></>
+            </section>
 
+            {/* Formulaire */}
+            <motion.div
+                initial={{ opacity: 0, x: 80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="bg- rounded-3xl p-10  w-full lg:w1/2 mx-auto  display-flex grid place-items-center"
+            >
 
+                <h3 className="text-3xl font-bold text-green-900 mb-2">
+                    Envoyer un message
+                </h3>
+
+                <p className="text-gray-600 mb-8">
+                    Une question, une suggestion ou une préoccupation ? N’hésitez pas à nous écrire, nous vous répondrons dans les plus brefs délais.
+                </p>
+
+                <form className="space-y-6 w-full md:w-1/2 items-center shadow-2xl p-10 rounded-3xl bg-whit">
+
+                    {/* Nom */}
+                    <div>
+                        <label className="block mb-2 font-medium text-gray-700">
+                            Nom complet
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Votre nom"
+                            className="w-full border border-gray-300 rounded-xl p-4 outline-none focus:ring-2 focus:ring-green-700"
+                        />
+                    </div>
+
+                    {/* Email */}
+                    <div>
+                        <label className="block mb-2 font-medium text-gray-700">
+                            Adresse email
+                        </label>
+
+                        <input
+                            type="email"
+                            placeholder="Votre email"
+                            className="w-full border border-gray-300 rounded-xl p-4 outline-none focus:ring-2 focus:ring-green-700"
+                        />
+                    </div>
+
+                    {/* Message */}
+                    <div>
+                        <label className="block mb-2 font-medium text-gray-700">
+                            Message
+                        </label>
+
+                        <textarea
+                            rows={5}
+                            placeholder="Votre message..."
+                            className="w-full border border-gray-300 rounded-xl p-4 outline-none focus:ring-2 focus:ring-green-700"
+                        ></textarea>
+                    </div>
+
+                    {/* Bouton */}
+                    <button
+                        type="submit"
+                        className="bg-green-800 hover:bg-green-900 transition text-white px-8 py-4 rounded-xl font-semibold w-full"
+                    >
+                        Envoyer le message
+                    </button>
+
+                </form>
+            </motion.div>
+
+        </>
     );
 };
 

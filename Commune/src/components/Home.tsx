@@ -15,7 +15,6 @@ const Home = () => {
       <MainLayout>
       <Hero />
       <QuickServices />
-      {/* <AboutSection /> */}
       <NewsSection />
       <Stats />
     </MainLayout>
