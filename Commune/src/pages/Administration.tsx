@@ -16,15 +16,15 @@ import MainLayout from "../components/MainLayout";
 
 const teamMembers = [
   {
-    name: "M. Jean Dupont",
+    name: "M. Martin KATAKENON ",
     role: "Maire de la Commune",
   },
   {
-    name: "Mme Sophie Alavo",
+    name: "Mme ",
     role: "1ère Adjointe au Maire",
   },
   {
-    name: "M. Pierre Hounkpe",
+    name: "M. ",
     role: "Secrétaire Exécutif",
   },
 ];
@@ -131,11 +131,11 @@ const Administration = () => {
 
               <div>
                 <h3 className="font-bold text-xl text-green-900">
-                  M. Jean Dupont
+                  M. Martin KATAKENON
                 </h3>
 
                 <p className="text-gray-500">
-                  Maire de la Commune
+                  Actuel Maire de la Commune de DJIDJA
                 </p>
               </div>
             </motion.div>
