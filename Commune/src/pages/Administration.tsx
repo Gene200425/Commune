@@ -10,7 +10,7 @@ import {
   MapPin,
 } from "lucide-react";
 
-import marie from "../assets/mairie.png";
+import marie from "../assets/maire.jpg";
 import admin from "../assets/admin.png"
 import MainLayout from "../components/MainLayout";
 
@@ -100,7 +100,7 @@ const Administration = () => {
               <img
                 src={marie}
                 alt="Maire"
-                className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
+                className="rounded-3xl shadow-2xl w-full h-[700px] object-cover"
               />
             </motion.div>
 

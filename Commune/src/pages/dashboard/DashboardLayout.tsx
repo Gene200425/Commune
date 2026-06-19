@@ -1,3 +1,4 @@
+import { FileText, MailPlus, Megaphone, User } from "lucide-react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 
 const DashboardLayout = () => {
@@ -30,30 +31,30 @@ const DashboardLayout = () => {
 
                     <Link
                         to="/dashboard/actualites"
-                        className="p-3 rounded-lg hover:bg-green-800"
+                        className="p-3 rounded-lg hover:bg-green-800 flex gap-4"
                     >
-                        📢 Actualités
+                        <Megaphone /> Actualités
                     </Link>
 
                     <Link
                         to="/dashboard/documents"
-                        className="p-3 rounded-lg hover:bg-green-800"
+                        className="p-3 rounded-lg hover:bg-green-800 flex gap-4"
                     >
-                        📄 Documents
+                        <FileText />   Documents
                     </Link>
 
                     <Link
                         to="/dashboard/messages"
-                        className="p-3 rounded-lg hover:bg-green-800"
+                        className="p-3 rounded-lg hover:bg-green-800 flex gap-4"
                     >
-                        📬 Messages
+                     <MailPlus />  Messages
                     </Link>
 
                     <Link
                         to="/dashboard/profil"
-                        className="p-3 rounded-lg hover:bg-green-800"
+                        className="p-3 rounded-lg hover:bg-green-800 flex gap-4"
                     >
-                        👤 Profil
+                        <User /> Profil
                     </Link>
 
                 </nav>

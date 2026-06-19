@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-
+const messagesRoutes = require("./routes/messagesRoutes");
 const actualitesRoutes = require("./routes/actualitesRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const authRoutes = require("./routes/authRoutes");
@@ -20,7 +20,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/actualites", actualitesRoutes);
 app.use("/admins", adminRoutes);
 app.use("/auth", authRoutes);
-
+app.use("/messages", messagesRoutes);
 // test backend
 app.get("/", (req, res) => {
   res.json({ message: "Backend opérationnel" });

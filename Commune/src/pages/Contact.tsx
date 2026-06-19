@@ -1,4 +1,6 @@
+
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 import {
     Phone,
@@ -11,6 +13,43 @@ import {
 import MainLayout from "../components/MainLayout";
 
 const ContactSection = () => {
+
+    const [nom, setNom] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+
+    const envoyerMessage = async (
+        e: React.FormEvent
+    ) => {
+        e.preventDefault();
+
+        const response = await fetch(
+            "http://localhost:5000/messages",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    nom,
+                    email,
+                    message,
+                }),
+            }
+        );
+
+        const data = await response.json();
+
+        if (data.success) {
+            alert("Message envoyé avec succès");
+
+            setNom("");
+            setEmail("");
+            setMessage("");
+        }
+    };
+
     return (
         <MainLayout>
             <section className=" py-20 px-6">
@@ -108,21 +147,21 @@ const ContactSection = () => {
                                         href="#"
                                         className="bg-green-100 hover:bg-green-200 transition p-4 rounded-full"
                                     >
-                                       f {/* <Facebook className="text-green-800" /> */}
+                                        f {/* <Facebook className="text-green-800" /> */}
                                     </a>
 
                                     <a
                                         href="#"
                                         className="bg-green-100 hover:bg-green-200 transition p-4 rounded-full"
                                     >
-                                      Ins {/* <Instagram className="text-green-800" /> */}
+                                        Ins {/* <Instagram className="text-green-800" /> */}
                                     </a>
 
                                     <a
                                         href="#"
                                         className="bg-green-100 hover:bg-green-200 transition p-4 rounded-full"
                                     >
-                                       lin  {/* <Linkedin className="text-green-800" /> */}
+                                        lin  {/* <Linkedin className="text-green-800" /> */}
                                     </a>
 
                                 </div>
@@ -142,7 +181,8 @@ const ContactSection = () => {
                                 Envoyer un message
                             </h3>
 
-                            <form className="space-y-6">
+                            <form onSubmit={envoyerMessage}
+                                className="space-y-6">
 
                                 {/* Nom */}
                                 <div>
@@ -153,6 +193,10 @@ const ContactSection = () => {
                                     <input
                                         type="text"
                                         placeholder="Votre nom"
+                                        value={nom}
+                                        onChange={(e) =>
+                                            setNom(e.target.value)
+                                        }
                                         className="w-full border border-gray-300 rounded-xl p-4 outline-none focus:ring-2 focus:ring-green-700"
                                     />
                                 </div>
@@ -166,6 +210,10 @@ const ContactSection = () => {
                                     <input
                                         type="email"
                                         placeholder="Votre email"
+                                        value={email}
+                                        onChange={(e) =>
+                                            setEmail(e.target.value)
+                                        }
                                         className="w-full border border-gray-300 rounded-xl p-4 outline-none focus:ring-2 focus:ring-green-700"
                                     />
                                 </div>
@@ -179,6 +227,10 @@ const ContactSection = () => {
                                     <textarea
                                         rows={5}
                                         placeholder="Votre message..."
+                                        value={message}
+                                        onChange={(e) =>
+                                            setMessage(e.target.value)
+                                        }
                                         className="w-full border border-gray-300 rounded-xl p-4 outline-none focus:ring-2 focus:ring-green-700"
                                     ></textarea>
                                 </div>
