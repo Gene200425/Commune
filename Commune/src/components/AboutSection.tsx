@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import historique from "../assets/Historique.jpg";
 import admin from "../assets/admin.png";
-import coton from "../assets/Coton.jpg";
+import coton from "../assets/coton.jpg";
 import DjidjaDo from "../assets/DjidjaDo.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 
