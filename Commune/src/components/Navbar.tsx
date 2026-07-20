@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, Search, X } from "lucide-react";
 import CommuneDropdown from "./CommuneDropdown";
 import { useState } from "react";
+import logo from "../assets/Logo_djidja12.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
           <div >
 
             <img
-              src="./src/assets/Logo_djidja12.png"
+              src={logo}
               alt=""
               className="rounded-3xl w-20 h-20 object-cover"
             />

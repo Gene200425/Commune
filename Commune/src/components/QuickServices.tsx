@@ -11,25 +11,25 @@ const QuickServices = () => {
 
   const services = [
     {
-  icon: <Landmark size={40} />,
-  title: "ATOUTS",
-},
-{
-  icon: <Music size={40} />,
-  title: "CULTURE",
-},
-{
-  icon: <Drum size={40} />,
-  title: "TRADITIONS",
-},
-{
-  icon: <Store size={40} />,
-  title: "MARCHES",
-},
-{
-  icon: <Newspaper size={40} />,
-  title: "ACTUALITÉS",
-},
+      icon: <Landmark size={40} />,
+      title: "ATOUTS",
+    },
+    {
+      icon: <Music size={40} />,
+      title: "CULTURE",
+    },
+    {
+      icon: <Drum size={40} />,
+      title: "TRADITIONS",
+    },
+    {
+      icon: <Store size={40} />,
+      title: "MARCHES",
+    },
+    {
+      icon: <Newspaper size={40} />,
+      title: "ACTUALITÉS",
+    },
     {
       icon: <MapPin size={40} />,
       title: "PLAN DE LA COMMUNE",

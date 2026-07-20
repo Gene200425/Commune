@@ -1,18 +1,19 @@
 import MainLayout from "../components/MainLayout";
 import { motion } from "framer-motion";
+import coton from "../assets/coton.jpg";
+
 
 const Commune = () => {
     return (
         <MainLayout>
 
             {/* HERO SECTION */}
-            <section
-                className="relative h-[600px] bg-cover bg-center"
+            <section>
+                <div  className="relative h-[600px] bg-cover bg-center"
                 style={{
-                    backgroundImage:
-                        "url('./src/assets/coton.jpg')",
+                    backgroundImage: `url(${coton})`,
                 }}
-            >
+                >
 
                 <div className="absolute inset-0 bg-black/50"></div>
 
@@ -36,6 +37,8 @@ const Commune = () => {
                         </p>
 
                     </motion.div>
+
+                </div>
 
                 </div>
 
@@ -192,16 +195,16 @@ const Commune = () => {
                         <p className="text-gray-600 leading-10 text-lg text-justify">
                             La commune de Djidja, située dans le département du Zou au centre du Bénin,
                             est riche d'une histoire marquée par la tradition, la résilience et l'évolution administrative.
-                            <br/>
+                            <br />
                             Autrefois simple regroupement de villages, Djidja s'est structuré progressivement
                             autour de la chefferie traditionnelle et des échanges agricoles. Elle tire son nom de
                             l'expression fon, <strong style={{ color: "green" }}>Dji-djè</strong>, qui signifie littéralement <strong style={{ color: "green" }}>la recolte à donnée</strong>
                             offre ainsi la fertilité territoriale de djidja.
-                            <br/> 
+                            <br />
                             Sous la colonisation, Djidja faisait partie du cercle d'Abomey. Elle a été établie
                             en commune à part entière à la faveur de la réforme administrative de 1978, puis consolidée
                             par la décentralisation de 2002.
-                            <br/>
+                            <br />
                             Aujourd'hui, Djidja est reconnue pour sa diversité culturelle, son dynamisme agricole et
                             ses efforts en matière de gouvernance locale. Elle continue d'écrire son histoire à travers
                             ses projets de développement et l'engagement de sa population.
